@@ -1,0 +1,554 @@
+/* GLOBAL RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Show nav normally on desktop */
+#nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide menu button on desktop */
+#menu-toggle {
+  display: none;
+}
+
+  #logo {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    height: 100px;
+    z-index: 1000;
+  }
+  
+  /* Invert button on hover */
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: For all links in nav as well */
+#section-nav button:hover {
+  background-color: white;
+  color: black;
+}
+
+.section-nav-btn {
+  font-size: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+}
+
+.section-nav-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Animation keyframes */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* General hidden state */
+.animate {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* When active */
+.animate.slide-left {
+  animation: slideInLeft 1s forwards;
+}
+
+.animate.slide-right {
+  animation: slideInRight 1s forwards;
+}
+
+
+  
+  /* HEADER SECTION */
+  #head {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 120px;  /* push content lower manually */
+    text-align: center;
+  }
+  
+  
+  #head::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    z-index: 1;
+  }
+  
+  #head > article {
+    position: relative;
+    z-index: 2;
+    max-width: none;
+    margin: 0 auto;
+  }
+  
+  
+  #head h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  #section-nav {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    white-space: nowrap;       
+    flex-wrap: nowrap;         
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+  #book button {
+    margin-top: 440px;
+    color: white;
+    border: 0.5px solid white;
+    padding: 28px 45px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 17.5px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* ABOUT US */
+
+  #aboutus {
+    padding: 100px 30px;
+    margin-left: 50px;
+  }
+  
+  .aboutus-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    flex: 1;
+    max-width: 70%;
+  }
+  
+  .about-columns {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .about-columns.titles {
+    margin-bottom: 10px;
+  }
+  
+  .about-col {
+    flex: 1;
+  }
+  
+  .about-title {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .about-col h4 {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .about-col p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .about-divider {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 20px 0 30px;
+  }
+  
+  .about-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: visible; /* critical */
+  }
+  
+
+  .about-right img {
+    width: 100%;  /* or a fixed value like 400px if needed */
+    max-width: none;
+    transform: translateX(100px); /* move right */
+  }
+
+  .about-divider.bottom {
+    margin-top: 150px;
+  }
+  
+  /* CONTACT */
+  #contactus {
+    padding: 60px;
+    margin: 0 auto;
+    border: 1px solid black; /* ✅ Thin black border */
+    border-radius: 15px;      /* Optional: adds rounded corners */
+    box-sizing: border-box;
+    max-width: 1200px;        /* Optional: keeps it from being too wide */
+  }
+  
+  
+  .contactus-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 30px; /* Actual visible spacing */
+    flex-wrap: nowrap; /* Prevent them from wrapping */
+  }
+  
+  .contactus-left {
+    width: 450px;
+    flex-shrink: 0;
+  }
+  
+  .contactus-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 14px 30px; /* ↑ larger padding */
+    font-size: 18px;     /* ↑ bigger text */
+    border-radius: 25px; /* smoother pill shape */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+  }
+  
+  .contactus-left h1 {
+    font-size: 60px;
+    font-family: 'Garet', sans-serif;
+    margin-bottom: 40px;
+  }
+  
+  .contactus-left img {
+    height:300px;
+    border-top-right-radius: 80px;
+  }
+  .contactus-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Form styling */
+  #aside2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* ensures full height available */
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+  }
+
+  #aside2 form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* push buttons to bottom */
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px; /* spacing between the two columns */
+    row-gap: 20px;
+  }
+
+  .form-grid .full-width {
+    grid-column: span 2;
+  }
+  
+  #aside2 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-grid input,
+  .form-grid textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+  }
+  
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+  
+  /* Button section */
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .form-buttons input {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .form-buttons input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  
+  .form-buttons input[type="reset"] {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  
+  
+  /* TESTIMONIALS */
+  #testimonials {
+    padding: 200px 60px;
+  }
+
+  .testimonial-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+  
+  .testimonial-wrapper {
+    display: flex;
+    align-items: flex-end; /* align everything to the bottom */
+    gap: 100px; /* 🆕 Add spacing between scroll area and testimonial title */
+    padding-right: 60px;
+  }
+  
+
+  .testimonial-scroll {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap; /* prevent wrapping so it scrolls */
+    padding-bottom: 10px;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 auto; /* Don't shrink or grow */
+    width: 300px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    font-family: sans-serif;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-scroll-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonial-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .testimonial-scroll::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+  }
+  
+  .testimonial-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .testimonial-content {
+    padding: 10px 15px;
+  }
+  
+  .testimonial-content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .testimonial-content h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+  }
+  
+  .testimonial-content span {
+    font-size: 0.8rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .testimonial-content p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-top: 1px solid black;
+    padding-top: 8px;
+  }
+  
+  .testimonial-footer {
+    text-align: right;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .testimonial-footer h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+  
+  .testimonial-footer hr {
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin-left: auto;
+  }
+  
+  
+  
+  /* FOOTER */
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .footer-col p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  
+  .footer-brand {
+    text-align: left;
+  }
+  
+  .footer-brand img {
+    height: 120px; /* Increase logo size here */
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 768px) {
+    #nav {
+      display: none; /* hide desktop nav */
+    }
+  
+    #menu-toggle {
+      display: block; /* show mobile toggle */
+    }
+  }
+
+  /* Hide hamburger menu on desktop */
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Show hamburger only on mobile */
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Hide desktop nav on mobile */
+  #nav.desktop-nav {
+    display: none !important;
+  }
+}
+
+  
+  
+  

@@ -1,0 +1,208 @@
+/* Mobile Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+  
+  /* Logo Centered */
+  #logo {
+    width: 120px;
+    display: block;
+    margin: 10px auto;
+  }
+  
+/* Only show menu button on mobile */
+#menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  /* Hide nav by default on mobile */
+  #nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* When menu is toggled open */
+  #nav.show {
+    display: flex;
+  }
+  
+  /* Mobile nav button styling */
+  #nav button {
+    font-size: 18px;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    /* Hide nav on mobile */
+    #nav {
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+      align-items: center;
+    }
+  
+    #nav.show {
+      display: flex;
+    }
+  
+    /* Show menu toggle button on mobile */
+    #menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+  
+    #nav button {
+      font-size: 18px;
+      padding: 12px 20px;
+      background: none;
+      border: none;
+      color: black;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  
+  
+  /* Book Now Button - moved up */
+  #book {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #book button {
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Background section adjustment */
+  .hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  /* Stack About Us Columns */
+  .aboutus-flex {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .about-text,
+  .about-columns,
+  .about-col {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .about-divider {
+    margin: 10px auto;
+  }
+  
+  /* About image */
+  .about-right {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .about-right img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Contact section */
+  .contactus-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contactus-left {
+    text-align: center;
+  }
+  
+  .contactus-left img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Contact form */
+  #aside2 form {
+    padding: 0 10px;
+  }
+  
+  .form-grid {
+    display: block;
+  }
+  
+  .form-grid > div,
+  .form-grid .full-width {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Testimonial cards */
+  .testimonial-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .testimonial-card {
+    min-width: 250px;
+    margin-right: 10px;
+  }
+  
+  /* Footer adjustments */
+  footer.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .footer-col {
+    margin-bottom: 20px;
+  }
+  
+  .footer-brand img {
+    width: 80px;
+    margin: 0 auto 10px auto;
+  }
+  
