@@ -1,164 +1,345 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-</head>
-<body>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link href="https://fonts.google.com/specimen/DM+Sans?query=dm+sans">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>BR</b> Architects</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-  </div>
+        <title>
+            CityBreak Travel
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+
+        
+    </head>
+
+    <body>
+        <img src="images/inverted.png" id="logo">
+
+<!-- Menu button (hidden on desktop) -->
+<button id="menu-toggle">☰ Menu</button>
+
+<!-- Navigation (hidden on mobile) -->
+<div id="nav">
+  <button>Home</button>
+  <button>About</button>
+  <button>Testimonials</button>
+  <button>Contact</button>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="/w3images/architect.jpg" alt="Architecture" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>
-  </div>
-</header>
+       <section id="head">
+                <article>
+                    
+                    <h1 id="maintitle">CITYBREAK TRAVEL</h1>
+                    <br>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+                    <div id="section-nav">
+                    <a href="#aboutus">
+                        <button style="font-size:10px; background-color:transparent; color:white; border-color: transparent;">ABOUT US</button>
+                    </a>
 
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
+                    <a href="#contactus">
+                        <button style="font-size:10px; background-color:transparent; color:white; border-color: transparent;">CONTACT FORM</button>
+                    </a>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-  </div>
+                    <a href="#testimonials">
+                        <button style="font-size:10px; background-color:transparent; color:white; border-color: transparent;">TESTIMONIALS</button>
+                    </a>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
-      </div>
-    </div>
-  </div>
+                    <a href="#certificates">
+                        <button style="font-size:10px; background-color:transparent; color:white; border-color: transparent;">CERTIFICATIONS</button>
+                    </a>
+                </div>
+                    
+                <a id="book" href="#contactus">
+                <button>Book Now</button>
+                </a>
 
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
+                </article>
+            </section>
 
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-      <h3>John Doe</h3>
-      <p class="w3-opacity">CEO & Founder</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-      <h3>Jane Doe</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-      <h3>Mike Ross</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-      <h3>Dan Star</h3>
-      <p class="w3-opacity">Architect</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-  </div>
+    <main>
+        <section id="aboutus">
+            <div class="aboutus-flex">
+          
+              <!-- TEXT COLUMN (titles + line + descriptions) -->
+              <div class="about-text">
+          
+                <div class="about-columns titles">
+                  <div class="about-col">
+                    <button class="about-title">WHO WE ARE</button>
+                  </div>
+                  <div class="about-col">
+                    <h4>MISSION</h4>
+                  </div>
+                  <div class="about-col">
+                    <h4>VISION</h4>
+                  </div>
+                </div>
+          
+                <hr class="about-divider">
+          
+                <div class="about-columns">
+                  <div class="about-col">
+                    <p>City Break Travel OPC is your trusted global travel partner, offering end-to-end travel solutions with a personal touch. Formerly known as C B Travel and Tours, the company has evolved since its inception in January 2023 to become a more dynamic and globally connected travel service provider.</p>
+                  </div>
+                  <div class="about-col">
+                    <p>To make travel effortless and enriching by curating personalized experiences with integrity, efficiency, and a genuine love for exploration.</p>
+                  </div>
+                  <div class="about-col">
+                    <p>To be a leading name in global travel solutions, known for reliability, innovation, and excellence in customer service.</p>
+                  </div>
+                </div>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Lets get in touch and talk about your next project.</p>
-    <form action="/action_page.php" target="_blank">
-      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
-  
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-</div>
+                <hr class="about-divider bottom"> <!-- Bottom line -->
+          
+              </div>
+          
+              <!-- ASIDE GRAPHIC -->
+              <aside class="about-right animate slide-right">
+                <img src="images/CBpartners.png" alt="CBT Graphic">
+              </aside>
+          
+            </div>
+          </section>
+          
+          
 
-<!-- End page content -->
-</div>
+          <section id="contactus">
+            <div class="contactus-flex">
+          
+              <!-- LEFT SIDE: heading, image -->
+              <div class="contactus-left animate slide-left">
+                <button class="contactus-btn">CONTACT US</button>
+                <h1>Get<br>In Touch</h1>
+                <img src="images/smallimg.jpg" alt="Scenic Road">
+              </div>
+          
+              <!-- RIGHT SIDE: form -->
+              <aside id="aside2" class="animate slide-right">
+                <form action="send_email.php" method="POST" enctype="multipart/form-data" id="emform">
+                  <div class="form-grid">
+                    <div>
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" placeholder="Lead Traveller's Name" required>
+                    </div>
+          
+                    <div>
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="traveller@email.com" required>
+                    </div>
+          
+                    <div>
+                      <label for="phone">Contact No.</label>
+                      <input type="tel" id="phone" name="phone" placeholder="+63 123 456 7890" required>
+                    </div>
+          
+                    <div>
+                      <label for="place">Destination</label>
+                      <input type="text" id="place" name="place" placeholder="e.g. Korea" required>
+                    </div>
+          
+                    <div>
+                      <label for="amountpax">No. Of Travellers</label>
+                      <input type="number" id="amountpax" name="amountpax" min="1" placeholder="e.g. 4" required>
+                    </div>
+          
+                    <div>
+                      <label for="dateFrom">Date Of Travel From</label>
+                      <input type="date" id="dateFrom" name="dateFrom" required>
+                    </div>
+          
+                    <div>
+                      <label for="dateTo">Date Of Travel To</label>
+                      <input type="date" id="dateTo" name="dateTo" required>
+                    </div>
+          
+                    <div class="full-width">
+                      <label for="details">Additional Details</label>
+                      <textarea id="details" name="details" rows="5"></textarea>
+                    </div>
+                  </div>
+          
+                  <div class="form-buttons">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                  </div>
+                </form>
+              </aside>
+          
+            </div>
+          </section>
+          
+          
 
+          <section id="testimonials">
+            <div class="testimonial-wrapper animate slide-left">
+              
+              <!-- Scrollable container for testimonial cards -->
+              <div class="testimonial-scroll-wrapper">
+                <div class="testimonial-scroll">
+          
+                  <!-- Testimonial cards -->
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                  <div class="testimonial-card">
+                    <img src="images/placeholder.png" alt="Destination">
+                    <div class="testimonial-content">
+                      <div class="header">
+                        <h3>KOREA</h3>
+                        <span>November 2019</span>
+                      </div>
+                      <p>Extra details (i.e comment)</p>
+                    </div>
+                  </div>
+          
+                </div> <!-- end of .testimonial-scroll -->
+              </div> <!-- end of .testimonial-scroll-wrapper -->
+          
+              <!-- Title stays outside the scroll area, bottom right -->
+              <div class="testimonial-footer animate slide-right">
+                <h2>TESTIMONIALS</h2>
+                <hr>
+              </div>
+          
+            </div> <!-- end of .testimonial-wrapper -->
+          </section>
+          
+      
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+        </main>
 
-</body>
+        <footer class="footer" id="certificates">
+            <div class="footer-col">
+              <h4>CERTIFICATIONS</h4>
+              <p>Certificate Title</p>
+              <p>Certificate Title</p>
+              <!-- More -->
+            </div>
+          
+            <div class="footer-col">
+              <h4>PARTNERS</h4>
+              <p>company name</p>
+              <p>company name</p>
+              <!-- More -->
+            </div>
+          
+            <div class="footer-col">
+              <h4>CONTACT</h4>
+              <p><strong>EMAIL</strong> inquire@citybreaktravel.com</p>
+              <p><strong>MOBILE NO.</strong> +63 285 345 4459</p>
+              <p><strong>LANDLINE</strong> +123456</p>
+              <p><strong>ADDRESS</strong> #10 Congressional Avenue, QC, PH</p>
+            </div>
+          
+            <div class="footer-col footer-brand">
+              <img src="images/inverted.png" alt="CBT Logo">
+              <p>
+                Whether you're planning a business trip, a romantic getaway, or a family holiday,<br>
+                we ensure every journey is seamless, enjoyable, and memorable.
+              </p>
+            </div>
+          </footer>
+          
+          
+          
+          
+        
+        <!-- COMMENTS -->
+        <script>
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('slide-left'); // or 'slide-right'
+                observer.unobserve(entry.target); // remove after triggering
+              }
+            });
+          });
+        
+          document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+          });
+        </script>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const nav = document.getElementById('nav');
+        
+            menuToggle.addEventListener('click', function () {
+              nav.classList.toggle('show');
+            });
+          });
+        </script>
+        
+        
+        
+    </body>
 </html>
