@@ -343,70 +343,77 @@ ul {
 }
 
 .testimonials-section {
+  width: 100%;
   padding-top: 150px;
-  padding-right: 60px;
+  padding-bottom: 150px;
   box-sizing: border-box;
+  background-color: #f9f9f9; /* optional background color */
 }
 
 .testimonials-title {
   text-align: right;
+  margin-right: 50px;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-container {
-  position: relative;
   width: 100%;
-  padding: 0 300px; /* Added horizontal padding */
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
 }
 
-.carousel-track {
-  display: contents;
-  gap: 16px;
-  transition: transform 2s ease;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-.carousel-track-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
 .carousel-track-wrapper {
-  display: flex;
-  overflow-x: auto;
+  max-width: 1500px; /* Constrain carousel to centered container */
   width: 100%;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0 1rem; /* Optional inner padding */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
 .testimonial-card {
-  flex: 0 0 calc(33.333% - 10.66px);
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   background-color: #fff;
+  aspect-ratio: 4/3;
   border-radius: 8px;
   overflow: hidden;
   text-align: left;
 }
 
 .card-image {
-  width: 70%;
-  height: 200px;
+  width: 100%;
+  padding-top: 60%; /* 3:2 ratio image area */
   background-size: cover;
   background-position: center;
   position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .card-image::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2); /* black overlay */
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 8px 8px 0 0;
+}
+
+.card-details {
+  flex: 1; /* This allows the details to take up the remaining space */
+  padding: 0.5rem;  /* Reduced padding */
 }
 
 .date {
@@ -415,35 +422,13 @@ ul {
   font-size: 0.9rem;
 }
 
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  color: black;
-  border: none;
-  font-size: 2rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  opacity: 0.8;
-  transition: background 0.3s;
-}
-
-.carousel-arrow.left {
-  left: 40px;
-}
-
+.carousel-arrow,
+.carousel-arrow.left,
 .carousel-arrow.right {
-  right: 40px;
+  display: none; /* Or remove these rules entirely */
 }
 
-.testimonials-section {
-  position: relative;
-  padding-right: 260px;
-  box-sizing: border-box;
-}
+
 
 .footer {
   font-family: sans-serif;
@@ -505,7 +490,6 @@ ul {
 
 .contact-info {
   position: relative;
-  left: -380px;
 }
 
 .contact-info p,
@@ -531,33 +515,7 @@ ul {
   width: 300px;
 }
 
-@media (max-width: 768px) {
-  /* Stack form fields vertically with full width */
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .form-section, .contact-info {
-    width: 100%;
-  }
-
-  .carousel-container {
-    padding: 0 20px;
-  }
-
-  .testimonial-card {
-    flex: 0 0 100%;
-  }
-
-  .carousel-arrow {
-    display: none; /* hide arrows on small screens, drag only */
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+#certifications {
+  display: none;
 }
-
 
