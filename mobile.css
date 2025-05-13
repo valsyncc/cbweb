@@ -1,0 +1,347 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sections stretch edge-to-edge */
+section {
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container for centered content inside sections */
+.centered-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-image: url('images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0; /* No inner padding — handled by .centered-content */
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 1.5rem;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  padding: 0 1.5rem;
+  margin-right: 50px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.book-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Stretch the entire section */
+.about-us-section {
+  width: 100vw;
+  background-color: #fff; /* or your desired background */
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+/* Main content wrapper */
+.about-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Left column takes full width and centers content */
+.left-column {
+  width: 100%;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Typography tweaks for mobile readability */
+.left-column h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.left-column h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.left-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Labels and button section */
+.labels {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.services-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Popup styling */
+
+.popup-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  position: relative;
+  top: 100%; /* Adjust to your needs */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  padding: .5rem .5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Ensure it's on top */
+  max-width: 60vw;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+.popup-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.popup-content ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+/* Right column hidden completely */
+.right-column {
+  display: none !important;
+}
+
+/* Container stretches full width, content centers inside */
+.rounded-image{
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+/* Mobile specific styles */
+
+  /* Testimonials section full width */
+
+  @media (max-width: 768px) {
+    .carousel-container {
+      padding: 0 1rem; /* or 0 20px */
+    }
+  }
+  
+  .testimonials-section {
+    width: 100vw;
+    padding: 2rem 1rem; /* Adjust padding to ensure some spacing */
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* Title centered */
+  .testimonials-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Carousel container keeps content centered */
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Prevent carousel from stretching too wide */
+  .carousel-track-wrapper {
+    width: 100%;
+    max-width: 100%; /* Ensures the track doesn't overflow */
+    overflow: hidden; /* Hide overflow */
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Add this */
+    scroll-snap-type: x mandatory; /* Optional: for better touch feel */
+  }
+  
+
+  /* Each testimonial card is centered */
+  .testimonial-card {
+    flex: 0 0 80%; /* Don’t allow shrink, set basis to 80% */
+    margin: 0 5px;
+    text-align: center;
+    scroll-snap-align: center; /* Optional */
+  }
+  
+
+  /* Image styling */
+  .card-image {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-arrow,
+.carousel-arrow.left,
+.carousel-arrow.right {
+  display: none; /* Or remove these rules entirely */
+}
+
+  /* Adjust margins and padding */
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  /* Optional: Add spacing around the button row */
+  .button-row {
+    margin-top: 1rem;
+  }
+
+  .footer-logo{
+    max-width: 150px;
+  }
+
+  .footer-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    font-size: 10px;
+    gap: 10px;
+  }
+
+  .footer-column h4{
+    margin-top: 10px;
+  }
+
+
+  #certifications {
+    display: none;
+  }
+
+
+
+
+
+
+  
+
+
+
+
+
+

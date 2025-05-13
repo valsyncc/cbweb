@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityBreak Travel Corp.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+  <script src="main.js"></script>
+
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#home" class="logo">
+        <img src="images/inverted.png" alt="CBT Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#container">Contact</a></li>
+        <li><a href="#testimonials-section">Testimonials</a></li>
+        <li><a href="#footer" class="profile-circle">C</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="centered-content">
+      <h1>CityBreak Travel Corp.</h1>
+      <p>A one-stop travel hub, offering a comprehensive range of services.</p>
+      <a href="#container" class="book-button">Book Now</a>
+    </div>
+    </div>
+  </section>
+
+  <section class="about-us-section" id="about">
+    <div class="about-content">
+      <div class="left-column">
+        <h2>About Us</h2>
+  
+        <h3>Who We Are</h3>
+        <p>City Break Travel OPC is your trusted global travel partner, offering end-to-end travel solutions with a personal touch. Formerly known as C B Travel and Tours, the company has evolved since its inception in January 2023 to become a more dynamic and globally connected travel service provider.</p>
+  
+        <h3>Mission</h3>
+        <p>To make travel effortless and enriching by curating personalized experiences with integrity, efficiency, and a genuine love for exploration.</p>
+  
+        <h3>Vision</h3>
+        <p>To make travel effortless and enriching by curating personalized experiences with integrity, efficiency, and a genuine love for exploration.</p>
+  
+        <div class="labels">
+          <span class="label">Formerly: C.B. Travel and Tours</span>
+        
+          <div class="popup-wrapper">
+            <button id="services-btn" class="services-btn" onclick="togglePopup(event)">Services Offered</button>
+        
+            <div id="popup" class="popup hidden">
+              <div class="popup-content">
+                <h3>Our Services</h3>
+                <ul>
+                  <li>Customized International & Local Tour Packages
+                  </li>
+                  <li>Visa Assistance</li>
+                  <li>Airline Ticketing (Domestic & International)</li>
+                  <li>Hotel Reservations</li>
+                  <li>Corporate Travel Planning</li>
+                  <li>Group Tours and Family Vacations
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+  
+      <div class="right-column">
+        <img src="images/CBpartners.png" alt="About Us Graphic Placeholder" />
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us">
+  <div class="container" id="container">
+    <!-- Left Column: Contact Form -->
+    <div class="form-section">
+      <h1>Get In Touch</h1>
+      <form action="https://formspree.io/f/xvgakjlq" method="POST">
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" name="name" required/>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Your Phone Number" name="phone"/>
+
+        <label>E-mail Address</label>
+        <input type="email" placeholder="Your Email" name="email" required/>
+
+        <label>Destination</label>
+        <input type="text" placeholder="Destination" name="destination"/>
+
+        <label>Number of People</label>
+        <input type="number" placeholder="Number of People" min="1" name="numPeople"/>
+
+        <label>Date of Travel From</label>
+        <input type="date" name="from"/>
+
+        <label>Date of Travel To</label>
+        <input type="date" name="to"/>
+
+        <label>Additional Details</label>
+        <textarea placeholder="Enter any additional info..." name="details"></textarea>
+
+        <div class="form-buttons">
+          <button type="submit" class="primary-btn">Submit</button>
+          <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Column: Why Choose Us -->
+    <div class="info-section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Strong international network</li>
+        <li>Tailor-fit packages for every kind of traveler</li>
+        <li>End-to-end travel support</li>
+        <li>Reliable, efficient, and customer-focused team</li>
+        
+      </ul>
+        <p>Let City Break Travel Corporation be your gateway to the world.<br>
+                    Discover more. Worry less.</p>
+      <div class="button-row">
+        <button class="pbtn">Button</button>
+        <button class="sbtn">Secondary button</button>
+      </div>
+
+      <img src="images/smallimg.jpg" alt="Scenic Travel" class="rounded-image" />
+    </div>
+  </div>
+</section>
+
+  <section class="testimonials-section" id="testimonials-section">
+    <h2 class="testimonials-title">Testimonials</h2>
+
+    
+
+    <div class="carousel-container">
+      <button class="carousel-arrow left">&#10094;</button>
+
+      <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <!-- Slide 1 -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/3.JPG');"></div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/5.JPG');"></div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/6.JPG');"></div>
+        </div>
+  
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/7.JPEG');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/8.JPG');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/9.JPG');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/11.JPG');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/15.jpg');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/16.jpg');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/19.jpg');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/22.jpg');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/25.jpg');"></div>
+        </div>
+
+        <!-- Add more slides as needed -->
+        <div class="testimonial-card">
+          <div class="card-image" style="background-image: url('groups/1000041908.JPG');"></div>
+        </div>
+
+      </div>
+      <button class="carousel-arrow right">&#10095;</button>
+    </div>
+
+   
+
+  </section>
+  
+  <footer class="footer" id="footer">
+    <!-- Top gray header -->
+    <div class="footer-header">
+      <h2>City Break Travel OPC</h2>
+      <div class="footer-buttons">
+        <button class="footer-btn active">Travel</button>
+        <button class="footer-btn">Explore</button>
+      </div>
+    </div>
+  
+    <hr />
+  
+    <!-- Bottom white section -->
+    <div class="footer-content">
+      <!-- Logo -->
+      <div class="footer-column logo-container">
+        <img src="images/logo.png" alt="CBT Logo" class="footer-logo" />
+      </div>
+  
+      <!-- Contact (now to the right of the logo) -->
+      
+      <div class="footer-column contact-info">
+        <h4>Contact</h4>
+        <p>getbook@citybreakcorp.com</p>
+        <p>Unit 302 #10 Congressional Avenue<br /> Brgy. Bahay Toro, Quezon City 1106</p>
+        <p>(63) 917 166 3953</p>
+        <p>(02) 7000 - 7129</p>
+      </div>
+  <div class="footer-row">
+      <!-- Partners -->
+      <div class="footer-column">
+        <h4>Partners</h4>
+        <p>🇸🇬 Incredible Odyssey PTE LTD Singapore</p>
+        <p>🇻🇳 Venus Travel Vietnam</p>
+        <p>🇰🇭 Unique Compass Cambodia</p>
+        <p>🇬🇧 Carnival Holidays United Kingdom</p>
+      </div>
+  
+      <!-- Certifications -->
+      <div class="footer-column" id="certifications">
+        <h4>Certifications</h4>
+        <p>Certificate</p>
+        <p>Certificate</p>
+        <p>Certificate</p>
+      </div>
+    </div>
+  </div>
+  </footer>
+  
+    
+  
+  
+
+</body>
+</html>
