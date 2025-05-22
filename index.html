@@ -38,6 +38,34 @@
     </div>
   </section>
 
+  <!-- ANNOUNCEMENT-->
+  <section id="announcement" class="announce">
+    <div class="text-announce">
+      <h1>City Break Travel Corporation Announces Strategic Partnership with Value Tours Co., Ltd. Thailand</h1>
+      <p>We are thrilled to announce a new and exciting milestone in the journey of City Break Travel Corporation (CBTC) — <b>we are now the official partner and satellite office of Value Tours Co., Ltd. Thailand. </b><br> <br>
+         Both CBTC and Value Tours bring over two decades of expertise in the Philippine travel industry, and this partnership marks a significant step forward in our mission to offer the most competitive prices, high-quality services, and tailored travel experiences for our clients. <br> <br>
+         With the addition of Value Tours Co., Ltd. to our international network, CBTC now proudly represents five trusted travel companies across Southeast Asia and Europe: <br>
+         <b>🇹🇭 Thailand – Value Tours Co., Ltd. (NEW) <br>
+         🇻🇳 Vietnam – Venus Travel DMC <br>
+         🇸🇬 Singapore – Incredible Odyssey Pte. Ltd. <br>
+         🇰🇭 Cambodia – Unique Compass <br>
+         🌍 Europe – Holiday Carnival Group (covering Schengen countries, Scandinavia, and Great Britain) </b><br>
+         This strategic alliance not only strengthens our regional footprint but also allows us to provide an even broader range of services to our customers. <br> <br>
+         Stay tuned for exciting packages and announcements soon!
+         For inquiries or bookings, <b>contact us at getbooked@citybreakcorp.com.</b> <br>
+         <b>CBTC — Where Your Journey Begins.</b>
+</p>
+    </div>
+
+    <div class="img-announce">
+      <img src="images/ann-2.jpg" alt="Announcement Image">
+    </div>
+    
+      
+    </div>
+    <button id="close-announcement">&#x25B2;</button> <!-- Up arrow -->
+   </section>
+
   <section class="about-us-section" id="about">
     <div class="about-content">
       <div class="left-column">
@@ -397,7 +425,87 @@
   
     
   
-  
+  <button id="open-announcement">&#x25BC;</button> <!-- Down arrow -->
 
 </body>
 </html>
+
+<script>
+  const announcement = document.getElementById('announcement');
+  const closeBtn = document.getElementById('close-announcement');
+  const openBtn = document.getElementById('open-announcement');
+  const carousel = document.getElementById('carousel');
+  let index = 0;
+  let lastScrollY = window.scrollY;
+
+  // Show on load
+  window.addEventListener('load', () => {
+    announcement.classList.add('show');
+  });
+
+  // Close the announcement
+  closeBtn.addEventListener('click', () => {
+    announcement.classList.remove('show');
+    openBtn.style.display = 'block';
+  });
+
+  // Open the announcement
+  openBtn.addEventListener('click', () => {
+    announcement.classList.add('show');
+    openBtn.style.display = 'none';
+  });
+
+  // Detect scroll direction to show open button
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY < lastScrollY && !announcement.classList.contains('show')) {
+      openBtn.style.display = 'block';
+    } else {
+      openBtn.style.display = 'none';
+    }
+    lastScrollY = currentScrollY;
+  });
+
+  // Basic Carousel logic
+  setInterval(() => {
+    index = (index + 1) % 3; // 3 images
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000);
+
+  
+  const wrapper = document.querySelector('.carousel-track-wrapper');
+  const leftArrow = document.querySelector('.carousel-arrow.left');
+  const rightArrow = document.querySelector('.carousel-arrow.right');
+
+  const scrollAmount = 220; // adjust based on your card width + gap
+
+  leftArrow.addEventListener('click', () => {
+    wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+
+  const openButton = document.getElementById('open-announcement');
+  
+  // When the user clicks anywhere outside the announcement, hide it
+  window.addEventListener('click', function(event) {
+    // Check if the click is outside the announcement section and the open button
+    if (!announcement.contains(event.target) && !openButton.contains(event.target)) {
+      announcement.classList.add('hide'); // Hide the announcement
+    }
+  });
+
+  // Prevent click event from propagating to window when clicking inside the announcement
+  announcement.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the event from reaching the window
+  });
+
+  // Show the announcement when the open button is clicked
+  openButton.addEventListener('click', function() {
+    announcement.classList.remove('hide'); // Show the announcement
+  });
+
+</script>
