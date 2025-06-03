@@ -112,6 +112,7 @@ section {
 
 /* ANNOUNCEMENT START */
 #announcement {
+  display: none;
   position: fixed;
   top: -100%;
   left: 50%;
