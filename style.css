@@ -186,7 +186,7 @@ body, html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Arrow to Close */
+/* Arrow to Close 
 #close-announcement {
   position: absolute;
   bottom: 0px;
@@ -207,9 +207,9 @@ body, html {
 
 #close-announcement:hover {
   background: #f0f0f0;
-}
+}*/
 
-/* Open arrow */
+/* Open arrow 
 #open-announcement {
   position: fixed;
   top: 10px;
@@ -232,7 +232,7 @@ body, html {
 
 #open-announcement:hover {
   background: #f0f0f0;
-}
+}*/
 /* ANNOUNCEMENT END */
 
 .about-us-section {
@@ -680,4 +680,5 @@ ul {
 #certifications {
   display: none;
 }
+
 
