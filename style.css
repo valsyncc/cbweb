@@ -125,7 +125,7 @@ body, html {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* ANNOUNCEMENT START */
+/* ANNOUNCEMENT START 
 #announcement {
   position: fixed;
   top: -100%;
@@ -144,14 +144,14 @@ body, html {
   transition: top 0.5s ease-in-out;
   min-height: 400px;
   max-height: 800px;
-}
+}*/
 
-/* Show the announcement */
+/* Show the announcement 
 #announcement.show {
   top: 40px;
-}
+}*/
 
-/* Two-column layout */
+/* Two-column layout 
 .text-announce {
   width: 55%;
   padding-right: 30px;
@@ -166,9 +166,9 @@ body, html {
 .text-announce p {
   font-size: .9rem;
   line-height: 1.8;
-}
+}*/
 
-/* Updated image section */
+/* Updated image section 
 .img-announce {
   width: 45%;
   position: relative;
@@ -184,7 +184,7 @@ body, html {
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+}*/
 
 /* Arrow to Close 
 #close-announcement {
@@ -680,5 +680,6 @@ ul {
 #certifications {
   display: none;
 }
+
 
 
