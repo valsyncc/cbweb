@@ -350,6 +350,12 @@ section {
   display: none !important;
 }
 
+.form-section, .info-section {
+  flex: 1;
+  min-width: 100px;
+  max-width: 500px;
+}
+
 /* Container stretches full width, content centers inside */
 .rounded-image{
   margin-top: 10px;
@@ -370,8 +376,14 @@ section {
     width: 100vw;
     padding: 2rem 1rem; /* Adjust padding to ensure some spacing */
     box-sizing: border-box;
-    padding-left: 30px;
+    padding-left: 10px;
     padding-right: 30px;
+  }
+
+  .carousel-container button {
+    font-size: 15px;
+    margin: none;
+    padding: none;
   }
 
   /* Title centered */
@@ -406,8 +418,9 @@ section {
 
   /* Each testimonial card is centered */
   .testimonial-card {
+    min-width: 200px;
     flex: 0 0 80%; /* Don’t allow shrink, set basis to 80% */
-    margin: 0 5px;
+    margin: none;
     text-align: center;
     scroll-snap-align: center; /* Optional */
   }
@@ -421,12 +434,6 @@ section {
     border-radius: 8px;
     margin-bottom: 1rem;
   }
-
-  .carousel-arrow,
-.carousel-arrow.left,
-.carousel-arrow.right {
-  display: none; /* Or remove these rules entirely */
-}
 
   /* Adjust margins and padding */
   .testimonial-card p {
