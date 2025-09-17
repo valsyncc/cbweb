@@ -110,7 +110,7 @@ section {
   text-decoration: none;
 }
 
-/* ANNOUNCEMENT START */
+/* ANNOUNCEMENT START 
 #announcement {
   display: none;
   position: fixed;
@@ -131,23 +131,22 @@ section {
   transition: top 0.5s ease-in-out;
   min-height: 400px;
   overflow-y: auto;
-}
+}*/
 
-/* Show the announcement */
+/* Show the announcement 
 #announcement.show {
   top: 40px;
-}
+}*/
 
-/* Hidden state for the announcement */
+/* Hidden state for the announcement 
 #announcement.hide {
   top: -100%; /* Pushes the announcement out of view */
-  opacity: 0; /* Fades out */
-  pointer-events: none; /* Disables interaction when hidden */
-  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Adds smooth transition */
-}
+  /*opacity: 0;  Fades out */
+  /*pointer-events: none;  Disables interaction when hidden */
+   /*transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out; Adds smooth transition 
+}*/
 
-
-/* Two-column layout for larger screens */
+/* Two-column layout for larger screens 
 .text-announce {
   width: 55%;
   padding-right: 30px;
@@ -162,9 +161,9 @@ section {
 .text-announce p {
   font-size: 1.1rem;
   line-height: 1.8;
-}
+}*/
 
-/* Image section */
+/* Image section 
 .img-announce {
   width: 45%;
   position: relative;
@@ -180,9 +179,9 @@ section {
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+}*/
 
-/* Open arrow styling (button to open announcement) */
+/* Open arrow styling (button to open announcement) 
 #open-announcement {
   position: fixed;
   top: 10px;
@@ -198,50 +197,50 @@ section {
   text-align: center;
   line-height: 26px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 10000; /* Ensure it's on top */
-  transition: background 0.3s;
+  z-index: 10000; /* Ensure it's on top 
+  transition: background 0.3s;*//*
 }
 
 #open-announcement:hover {
   background: #f0f0f0;
-}
+}*/
 
-/* Mobile Fixes */
-@media (max-width: 768px) {
-  /* Stack the image and text */
-  #announcement {
-    flex-direction: column; /* Stack vertically on mobile */
-    max-height: 50vh; /* Allow more height to fit on smaller screens */
-    max-width: 45vh;
-    overflow-y: auto; /* Make it scrollable */
+/* Mobile Fixes 
+@media (max-width: 768px) {*/
+  /* Stack the image and text 
+  #announcement {*/
+    /*flex-direction: column;  Stack vertically on mobile */
+    /*max-height: 50vh;  Allow more height to fit on smaller screens */
+    /*max-width: 45vh;
+    overflow-y: auto;  Make it scrollabl/
     padding: 20px;
-  }
+  }e *
 
-  /* Image above text */
+  /* Image above text
   .img-announce {
-    width: 100%;
-    margin-bottom: 20px; /* Space between image and text */
+    width: 100%; */
+    /*margin-bottom: 20px;  Space between image and text 
   }
 
   .text-announce {
     width: 100%;
-  }
+  }*/
 
-  /* Make the close arrow a little smaller on mobile */
+  /* Make the close arrow a little smaller on mobile 
   #close-announcement {
     width: 25px;
     height: 25px;
     font-size: 18px;
     display: none;
-  }
+  }*/
 
-  /* Make the open arrow smaller as well */
+  /* Make the open arrow smaller as well 
   #open-announcement {
     width: 25px;
     height: 25px;
     font-size: 12px;
   }
-}
+}*/
 
 /* Stretch the entire section */
 .about-us-section {
@@ -472,6 +471,7 @@ section {
 
 
   
+
 
 
 
