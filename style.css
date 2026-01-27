@@ -36,23 +36,25 @@ body, html {
   z-index: 2;
   display: flex;
   justify-content: space-between; /* Push logo left, links right */
-  align-items: center;
-  padding: 20px 20px;
+  align-items: flex-start;
+  padding-top: 50px;
   padding-right: 60px;
+  margin-top: 0px;
   width: 100%;
   box-sizing: border-box;
 }
 
 
 .logo img {
-  height: 200px;
+  height: 150px;
   cursor: pointer;
 }
 
 .nav-links {
+  font-size: 20px;
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -78,7 +80,7 @@ body, html {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* or center if you want to center it */
+  justify-content: flex-start;
   height: 100vh;
   padding: 0 60px;
   overflow: hidden;
@@ -89,7 +91,7 @@ body, html {
   text-align: left;
   max-width: 1000px;
   padding-bottom: 80px;
-  padding-top: 150px; /* replace transform with this */
+  padding-top: 80px;
   position: absolute;
   top: 200px;
   left: 150px;
@@ -97,27 +99,54 @@ body, html {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 80px;
+
+.hero-content b {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  color: #e0e0e0;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
   color: #e0e0e0;
 }
 
 
 .book-button {
-  padding: 24px 24px;
+  padding: 20px 20px;
   border: 3px solid white;
   border-radius: 30px;
   background: transparent;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.3s;
+}
+
+.book-button2 {
+  padding: 10px 20px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   transition: background 0.3s;
 }
 
@@ -125,115 +154,6 @@ body, html {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* ANNOUNCEMENT START 
-#announcement {
-  position: fixed;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  max-width: 1400px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
-  z-index: 9999;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 40px;
-  transition: top 0.5s ease-in-out;
-  min-height: 400px;
-  max-height: 800px;
-}*/
-
-/* Show the announcement 
-#announcement.show {
-  top: 40px;
-}*/
-
-/* Two-column layout 
-.text-announce {
-  width: 55%;
-  padding-right: 30px;
-  font-family: Arial, sans-serif;
-}
-
-.text-announce h1 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-
-.text-announce p {
-  font-size: .9rem;
-  line-height: 1.8;
-}*/
-
-/* Updated image section 
-.img-announce {
-  width: 45%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.img-announce img {
-  width: 100%;
-  height: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}*/
-
-/* Arrow to Close 
-#close-announcement {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  text-align: center;
-  line-height: 26px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s;
-}
-
-#close-announcement:hover {
-  background: #f0f0f0;
-}*/
-
-/* Open arrow 
-#open-announcement {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  text-align: center;
-  line-height: 26px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  display: none;
-  z-index: 9998;
-  transition: background 0.3s;
-}
-
-#open-announcement:hover {
-  background: #f0f0f0;
-}*/
-/* ANNOUNCEMENT END */
 
 .about-us-section {
   width: 100%;
@@ -266,6 +186,18 @@ body, html {
   flex: 1;
   min-width: 300px;
   box-sizing: border-box;
+}
+
+.service {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  list-style-type: none;
+}
+
+.whychoose {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
 }
 
 .left-column h2 {
@@ -363,7 +295,7 @@ body, html {
 
 .container {
   font-family: 'Segoe UI', sans-serif;
-  padding: 40px;
+  padding-top: 90px;
   background-color: #fff;
   color: #111;
 }
@@ -372,13 +304,25 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: 10px;
 }
 
 .form-section, .info-section {
   flex: 1;
   min-width: 400px;
-  max-width: 500px;
+  max-width: 700px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.info-section {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.form-section {
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 h1, h2 {
@@ -475,118 +419,316 @@ ul {
   object-fit: cover;
 }
 
-.testimonials-section {
-  width: 100%;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  box-sizing: border-box;
-  background-color: #f9f9f9; /* optional background color */
+body {
+  font-family: Arial, sans-serif;
 }
 
-.testimonials-title {
-  text-align: right;
-  margin-right: 50px;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  max-width: 1200px;
-  margin-left: auto;
+.partners {
+  display: flex;
+  gap: 20px;              /* space between images */
+  align-items: center;
+}
+
+.partners img {
+  max-width: 10%;
+  height: auto;
+}
+
+.certs {
+  padding-left: 0px;
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;              /* space between images */
+  align-items: center;
+}
+
+.certs img {
+  height: 50px;
+  width: auto;
+
+}
+
+/* FAQS SECTION */
+.faqhead {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.faqhead::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.faq_7 * {
+  font-size: 1.5rem;
+}
+
+.faq_7 .responsive-cell-block {
+  min-height: 75px;
+}
+
+.faq_7 .text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.faq_7 .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
   margin-right: auto;
-  padding: 3%;
-  padding-bottom: 0;
-}
-
-.carousel-container {
-  width: 100%;
-  display: flex;
+  margin-bottom: 0px;
+  margin-left: auto;
   justify-content: center;
-  box-sizing: border-box;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
-.carousel-track-wrapper {
-  max-width: 1500px; /* Constrain carousel to centered container */
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  padding-bottom: 10px; /* space for scrollbar */
-  scroll-behavior: smooth;
-  padding: 20px 40px; /* Space on sides for arrows */
+.faq_7 .faq-head-bg {
+  background-color: #03a9f4;
+  color: white;
+  padding-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
 }
 
-.carousel-track-wrapper::-webkit-scrollbar {
-  height: 8px;
+.faq_7 .text-blk.faq-heading1 {
+  font-size: 30px;
+  line-height: 55px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
 }
 
-.carousel-track-wrapper::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
+.faq_7 .text-blk.faq-subheading {
+  font-size: 18px;
+  line-height: 26px;
 }
 
-.carousel-track-wrapper::-webkit-scrollbar-track {
-  background: #f0f0f0;
+.faq_7 .faq-dropdown-bg {
+  padding-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  padding-left: 60px;
 }
 
-/* Arrows styling (optional, adjust as needed) */
-.carousel-arrow {
-  background: white;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0px;
-  margin: 0 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 50%;
+.faq_7 .faq {
+  display: block;
+  flex-direction: column;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #aaaaaa;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 25px;
+  margin-left: 0px;
 }
 
-.carousel-arrow:hover {
-  background: #f0f0f0;
-}
-
-.carousel-track {
+.faq_7 .faq-question-container {
   display: flex;
-  gap: 50px;
-  transition: transform 0.5s ease;
-  width: 100%;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
 }
 
-.testimonial-card {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-  background-color: #fff;
-  aspect-ratio: 4/3;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: left;
+.faq_7 .faq-question-container:hover {
+  cursor: pointer;
 }
 
-.card-image {
-  width: 100%;
-  padding-top: 60%; /* 3:2 ratio image area */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.faq_7 .text-blk.faq-questions {
+  color: #525252;
+  font-size: 20px;
 }
 
-.card-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px 8px 0 0;
+.faq_7 .text-blk.faq-answer {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  color: #9c9c9c;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
 }
 
-.card-details {
-  flex: 1; /* This allows the details to take up the remaining space */
-  padding: 0.5rem;  /* Reduced padding */
+.faq_7 .text-blk.faq-subheading {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  max-width: 590px;
+  font-size: 18px;
 }
 
-.date {
-  color: #888;
-  margin-top: 4px;
-  font-size: 0.9rem;
+.faq_7 .answer-box {
+  max-height: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: max-height;
 }
+
+.faq_7 .faq.active .openimg {
+  transform: rotate(180deg);
+}
+
+.faq_7 .openimg {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  transition-property: transform;
+}
+
+.faq_7 .faq.active .answer-box {
+  max-height: 550px;
+}
+
+.faq_7 .faq-head-content {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  max-width: 450px;
+}
+
+.faq_7 .container-block {
+  max-width: 800px;
+}
+
+@media (max-width: 1024px) {
+  .faq_7 .text-blk.faq-answer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq_7 .text-blk.faq-heading1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+
+  .faq_7 .faq-head-content {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .faq_7 .faq-head-bg {
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+  }
+
+  .faq_7 .faq-dropdown-bg {
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+  }
+
+  .faq_7 .text-blk.faq-questions {
+    font-size: 18px;
+  }
+
+  .faq_7 .text-blk.faq-answer {
+    font-size: 16px;
+  }
+
+  .faq_7 .text-blk.faq-subheading {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-5.faq-head-bg {
+    padding-top: 80px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-7.faq-dropdown-bg {
+    padding-top: 80px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-5.faq-head-bg {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-7.faq-dropdown-bg {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .text-blk.faq-answer {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 22px;
+    font-size: 16px;
+  }
+
+  .faq_7 .text-blk.faq-questions {
+    font-size: 18px;
+  }
+
+  .faq_7 .text-blk.faq-heading1 {
+    font-size: 26px;
+  }
+
+  .faq_7 .text-blk.faq-subheading {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+
 
 
 
@@ -603,7 +745,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .footer-header h2 {
@@ -653,6 +795,16 @@ ul {
   position: relative;
 }
 
+.footer-column h2{
+  margin-top: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.footer-column iframe{
+  max-height: 300px;
+}
+
 .contact-info p,
 .footer-column p {
   margin: 10px 0;
@@ -662,8 +814,9 @@ ul {
 .contact-info h4,
 .footer-column h4 {
   font-weight: bold;
+  font-size: 2rem;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .logo-container{
@@ -680,6 +833,122 @@ ul {
 #certifications {
   display: none;
 }
+
+
+/* TESTIMONIAL EXP */
+/* Shadow box for testimonial content */
+.shadow-effect {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #ECECEC;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+}
+
+/* Testimonial text */
+#customers-testimonials .shadow-effect p {
+    font-family: inherit;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 17px 0;
+    font-weight: 300;
+}
+
+/* Testimonial name badge */
+.testimonial-name {
+    margin: -17px auto 0;
+    display: table;
+    width: auto;
+    background: #3190E7;
+    padding: 9px 35px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+}
+
+/* Carousel item: remove excessive padding, handle fade/scale */
+#customers-testimonials .item {
+    text-align: center;
+    opacity: 1;                /* side items faded */
+    transform: scale3d(0.85, 0.85, 1);
+    transition: all 0.3s ease-in-out;
+    padding: 0;                  /* remove extra top/bottom padding */
+    margin: 0;
+}
+
+.testimonial-img {
+    width: 40vw;          /* 20% of viewport width */
+    max-width: 500px;     /* optional max size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Remove extra bottom margin from images */
+#customers-testimonials .owl-item img {
+    margin-bottom: 0;
+}
+
+/* Remove padding from owl-items to reduce space between carousel and dots */
+#customers-testimonials .owl-item {
+    padding: 0 10px;             /* small horizontal spacing */
+}
+
+/* Owl dots styling */
+#customers-testimonials.owl-carousel .owl-dots {
+    margin-top: 15px;            /* bring dots closer */
+    text-align: center;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    background: #000000;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+.testimonials {
+    position: relative;   /* make pseudo-element relative to this section */
+    overflow: hidden;     /* prevent overlay from overflowing */
+}
+
+/* Overlay using a pseudo-element - short gradient on right */
+.testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.8),
+      rgba(220, 145, 15, 0) 25%
+    ),
+    linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.8),
+      rgba(220, 145, 15, 0) 25%
+    );
+}
+
+
+
+
+
+
 
 
 
